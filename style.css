@@ -1,0 +1,209 @@
+.header{
+    background-color: black;
+    padding-top:30px;
+    padding-left:30px;
+    padding-right:30px;
+    text-align:center;
+}
+.heading{
+    background-image: linear-gradient(#ECC440,#FFFA8A,#DDAC17,#FFFF95);
+    font-size:35px;
+    font-weight:900;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.profile{
+    transition: 2s ease-in-out;
+    border-radius:35px;
+}
+
+.intro li{
+    list-style-image: linear-gradient(#ECC440,#FFFA8A);
+    padding:10px;   
+    color: beige;
+}
+.tour-btn{
+    background-color: black;
+    color:beige;
+    padding:10px;
+    box-shadow: #FFFF95 2px 2px 2px 2px;
+    text-align:center;
+}
+.btn-container{
+    background-color: black;
+    text-align:center;
+    margin-top:0;
+    position:relative;
+    padding-bottom:-40px;
+}
+@media screen and (max-width:600px){
+    .heading{
+        font-size:22px;
+        text-align:center;
+    }
+    .profile{
+        height:30vh;
+        width:55vw;
+        margin-right:auto;
+        margin-left:auto;
+    }
+}
+@media screen and (min-width:601px) and (max-width:960px){
+    .header{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    .heading{
+        font-size:26px;
+        text-align:right;
+        order:0;
+        margin-top:30px;
+    }
+    .profile{
+        height:50vh;
+        width:30vw;
+        order:1;
+        margin-left:40px;
+        margin-top:160px;
+    }
+}
+@media screen and (min-width:961px){
+    .header{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+        padding-right:40px;
+        padding-left:40px;
+        padding-top:40px;
+        height:90vh;
+    }
+    .heading{
+        order:1;
+        font-size:30px;
+        padding-top:20px;
+        text-align:left;
+    }
+    .profile{
+        height:47vh;
+        width:27vw;
+        order:0;
+        margin-right:50px;
+        margin-top:90px;
+    }
+   
+}
+
+/* ANIMATION  */
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    background: rgba(255, 238, 0, 0.257);
+    animation: animate 5s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 2s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 5s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 5s;
+    animation-duration: 5s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 5s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 7s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 90%;
+    }
+
+}
